@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JC3-4r-hQv">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meetings-->
+        <scene sceneID="b2c-ZF-rfJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JC3-4r-hQv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meetings" image="meeting" id="mh4-ZL-M5t"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dO4-rv-2XN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Hc-6E-8VL" kind="relationship" relationship="rootViewController" id="c96-rD-21l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9U-V3-8H7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="692"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="cXy-nl-DMB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Details" id="6Nz-aJ-Gv7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZPy-qF-Pmr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WmT-EC-thR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="1862"/>
+        </scene>
+        <!--Meetings-->
+        <scene sceneID="6i7-yK-dIa">
+            <objects>
+                <tableViewController id="4Hc-6E-8VL" customClass="MeetingViewController" customModule="RM53_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vFp-v7-rpR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="meeting" id="DaY-6y-hG7">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DaY-6y-hG7" id="82w-ys-ge3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Hc-6E-8VL" id="qLh-DQ-sGg"/>
+                            <outlet property="delegate" destination="4Hc-6E-8VL" id="lKd-9H-g3k"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Meetings" id="CHh-BJ-BhI"/>
+                    <connections>
+                        <segue destination="ASK-xP-7bp" kind="showDetail" id="p72-Lj-7A2"/>
+                        <segue destination="iFh-E5-SfJ" kind="showDetail" id="krE-cy-zSz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3G6-WH-p5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="567"/>
+        </scene>
+        <!--Meeting Detail-->
+        <scene sceneID="IeT-lH-Hpk">
+            <objects>
+                <viewController id="dEk-KZ-sy0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uGn-tT-KaQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gmp-FS-kIG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wB6-st-F6n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Meeting Detail" id="MOb-Mw-4LS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hyy-I4-diW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3382" y="566"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oSW-dp-mcu">
+            <objects>
+                <navigationController id="iFh-E5-SfJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sH0-1J-x4a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Nz-aJ-Gv7" kind="relationship" relationship="rootViewController" id="a7C-5l-Mih"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hy-Zb-VtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="1253"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xm9-QQ-QcY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ASK-xP-7bp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rOh-0d-CSn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dEk-KZ-sy0" kind="relationship" relationship="rootViewController" id="G4e-WW-pow"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXv-Im-mxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2537" y="566"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="meeting" width="16" height="16"/>
+    </resources>
+</document>

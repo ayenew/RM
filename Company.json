@@ -1,0 +1,132 @@
+{
+    "company": [{
+                "name": "ABC Printing Press",
+                "address": "1 W ABC St",
+                "city": "Cincinnati",
+                "zipCode": "43021",
+                "contact": {
+                "firstName": "\"David\"",
+                "lastName": "\"Donald\"",
+                "role": "\"CFO\"",
+                "phone": {
+                "office": "212-212-2121",
+                "cell": "212-212-2122"
+                },
+                "email": [
+                          "212@gmail.com",
+                          "213@gmail.com"
+                          ]
+                }
+                },
+                {
+                "name": "CDE Consulting",
+                "address": "1 W ABC St",
+                "city": "Cincinnati",
+                "zipCode": "43021",
+                "contact ": {
+                "firstName": "\"David\"",
+                "lastName": "\"Donald\"",
+                "role": "\"CFO\"",
+                "phone": {
+                "office": "212-212-2121",
+                "cell": "212-212-2122"
+                },
+                "email": [
+                          "212@gmail.com",
+                          "213@gmail.com"
+                          ]
+                }
+                },
+                {
+                "name": "Subway",
+                "address": "1 W ABC St",
+                "city": "Cincinnati",
+                "zipCode": "43021",
+                "contact": {
+                "firstName": "\"David\"",
+                "lastName": "\"Donald\"",
+                "role": "\"CFO\"",
+                "phone": {
+                "office": "212-212-2121",
+                "cell": "212-212-2122"
+                },
+                "email": [
+                          "212@gmail.com",
+                          "213@gmail.com"
+                          ]
+                }
+                }, {
+                "name": "Bank of America",
+                "address": "1 W ABC St",
+                "city": "Cincinnati",
+                "zipCode": "43021",
+                "contact": {
+                "firstName": "\"David\"",
+                "lastName": "\"Donald\"",
+                "role": "\"CFO\"",
+                "phone": {
+                "office": "212-212-2121",
+                "cell": "212-212-2122"
+                },
+                "email": [
+                          "212@gmail.com",
+                          "213@gmail.com"
+                          ]
+                }
+                }, {
+                "name": "ABC",
+                "address": "1 W ABC St",
+                "city": "Cincinnati",
+                "zipCode": "43021",
+                "contact": {
+                "firstName": "\"David\"",
+                "lastName": "\"Donald\"",
+                "role": "\"CFO\"",
+                "phone": {
+                "office": "212-212-2121",
+                "cell": "212-212-2122"
+                },
+                "email": [
+                          "212@gmail.com",
+                          "213@gmail.com"
+                          ]
+                }
+                }, {
+                "name": "ABC",
+                "address": "1 W ABC St",
+                "city": "Cincinnati",
+                "zipCode": "43021",
+                "contact": {
+                "firstName": "\"David\"",
+                "lastName": "\"Donald\"",
+                "role": "\"CFO\"",
+                "phone": {
+                "office": "212-212-2121",
+                "cell": "212-212-2122"
+                },
+                "email": [
+                          "212@gmail.com",
+                          "213@gmail.com"
+                          ]
+                }
+                }, {
+                "name": "ABC",
+                "address": "1 W ABC St",
+                "city": "Cincinnati",
+                "zipCode": "43021",
+                "contact": {
+                "firstName": "\"David\"",
+                "lastName": "\"Donald\"",
+                "role": "\"CFO\"",
+                "phone": {
+                "office": "212-212-2121",
+                "cell": "212-212-2122"
+                },
+                "email": [
+                          "212@gmail.com",
+                          "213@gmail.com"
+                          ]
+                }
+                }
+                ]
+}
