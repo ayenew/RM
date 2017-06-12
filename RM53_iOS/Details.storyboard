@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Today's Plan-->
+        <!--My Book-->
         <scene sceneID="2kc-8s-oIa">
             <objects>
-                <viewController id="h6Q-7K-DjN" customClass="DetailViewController" customModule="RM53_Mobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h6Q-7K-DjN" customClass="DetailViewController" customModule="RM53_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="auu-wc-11u"/>
                         <viewControllerLayoutGuide type="bottom" id="IY0-bF-kzS"/>
@@ -37,7 +37,7 @@
                             </toolbar>
                         </subviews>
                     </view>
-                    <navigationItem key="navigationItem" title="Today's Plan" id="iQ8-BX-V99"/>
+                    <navigationItem key="navigationItem" title="My Book" id="iQ8-BX-V99"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gj8-st-Twg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

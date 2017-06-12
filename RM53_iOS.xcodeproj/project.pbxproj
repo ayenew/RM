@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530CA7DF1EEEC2F70087339E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CA7DE1EEEC2F70087339E /* CustomTabBarController.swift */; };
 		53F051091EED84D500D1C55D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F051081EED84D500D1C55D /* AppDelegate.swift */; };
 		53F051101EED84D500D1C55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F0510F1EED84D500D1C55D /* Assets.xcassets */; };
 		53F051251EED86EE00D1C55D /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F0511A1EED86EE00D1C55D /* Company.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530CA7DE1EEEC2F70087339E /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		53F051051EED84D500D1C55D /* RM53_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RM53_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F051081EED84D500D1C55D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F0510F1EED84D500D1C55D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				53F051301EED86FF00D1C55D /* LaunchScreen.xib */,
 				53F051311EED86FF00D1C55D /* LoginViewController.swift */,
 				53F051321EED86FF00D1C55D /* Login.storyboard */,
+				530CA7DE1EEEC2F70087339E /* CustomTabBarController.swift */,
 				53F051331EED86FF00D1C55D /* CommonHelper.swift */,
 				53F051341EED86FF00D1C55D /* GreenViewController.swift */,
 				53F051351EED86FF00D1C55D /* RedViewController.swift */,
@@ -205,6 +208,7 @@
 				53F051261EED86EE00D1C55D /* CustomSplitViewController.swift in Sources */,
 				53F0512C1EED86EE00D1C55D /* MeetingViewController.swift in Sources */,
 				53F0513B1EED86FF00D1C55D /* CommonHelper.swift in Sources */,
+				530CA7DF1EEEC2F70087339E /* CustomTabBarController.swift in Sources */,
 				53F051091EED84D500D1C55D /* AppDelegate.swift in Sources */,
 				53F0512E1EED86EE00D1C55D /* TopViewController.swift in Sources */,
 				53F0513F1EED86FF00D1C55D /* Company.swift in Sources */,

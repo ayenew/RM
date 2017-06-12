@@ -6,5 +6,8 @@ class CustomSplitViewController: UISplitViewController {
         self.splitViewController?.presentsWithGesture = true
         //preferredDisplayMode = .allVisible
         splitViewController?.view.backgroundColor = UIColor.red
+        self.tabBarController?.tabBar.isTranslucent = false
+        self.tabBarController?.tabBar.barTintColor = UIColor.red
+        self.tabBarController?.tabBar.backgroundColor = UIColor.blue
     }
 }

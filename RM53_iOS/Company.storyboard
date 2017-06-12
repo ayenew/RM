@@ -92,30 +92,43 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="SX8-v2-wXl" kind="relationship" relationship="rootViewController" id="Beg-MS-jr0"/>
+                        <segue destination="nfG-Ha-ObW" kind="relationship" relationship="rootViewController" id="W52-4H-YqG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZkV-gK-xA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="-40"/>
+            <point key="canvasLocation" x="2634" y="-40"/>
         </scene>
-        <!--Company 1-->
-        <scene sceneID="O2m-8G-fcX">
+        <!--Red View Controller-->
+        <scene sceneID="fVo-dS-2ZF">
             <objects>
-                <viewController id="SX8-v2-wXl" customClass="RedViewController" customModule="RM53_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nfG-Ha-ObW" customClass="RedViewController" customModule="RM53_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bLJ-7Y-Wik"/>
-                        <viewControllerLayoutGuide type="bottom" id="3m7-ob-WUq"/>
+                        <viewControllerLayoutGuide type="top" id="zQx-ma-6NQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ICV-bH-KXd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="t1f-O0-lea">
+                    <view key="view" contentMode="scaleToFill" id="oDb-8f-2ON">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-a8-muq">
+                                <rect key="frame" x="16" y="94" width="272" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Company 1" id="BDK-9A-dMc"/>
+                    <navigationItem key="navigationItem" id="QKe-1W-pjt"/>
+                    <connections>
+                        <outlet property="companyName" destination="Zm4-a8-muq" id="TFI-bP-OLZ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8yc-p1-PFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9X-aF-koJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3351" y="-51"/>
+            <point key="canvasLocation" x="3645.5999999999999" y="-90.404797601199405"/>
         </scene>
         <!--Details-->
         <scene sceneID="C1F-Zw-UIq">
