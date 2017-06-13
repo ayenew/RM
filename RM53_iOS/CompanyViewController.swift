@@ -9,6 +9,7 @@ class CompanyViewController: UITableViewController  {
     var delegate : DataDelegate?
     let searchController = UISearchController(searchResultsController: nil)
     var filteredCompany = [Company]()
+    var pageTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,12 @@ class CompanyViewController: UITableViewController  {
         tableView.tableHeaderView = searchController.searchBar
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //_ = self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,7 +40,7 @@ class CompanyViewController: UITableViewController  {
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredCompany.count
         }else{
-           return companies.count
+            return companies.count
         }
     }
     
@@ -52,23 +59,26 @@ class CompanyViewController: UITableViewController  {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //if delegate == nil {
-        if segue.identifier == "2" {
+        if segue.identifier == "1" {
             let destination = segue.destination as! UINavigationController
-            let detailVC = destination.topViewController as! RedViewController
+            let detailVC = destination.topViewController as! DetailViewController
             //self.delegate = detailVC
             let selectedIndex = self.tableView.indexPathForSelectedRow!
-            // delegate?.dataDidPassed(data: companies[selectedIndex.row])
-            detailVC.company = companies[selectedIndex.row]
-            //self.delegate = detailVC
-           // let selectedIndex = self.tableView.indexPathForSelectedRow!
+            detailVC.pageTitle = companies[selectedIndex.row].name
+            detailVC.indexNumber = selectedIndex.row
             // delegate?.dataDidPassed(data: companies[selectedIndex.row])
            // detailVC.company = companies[selectedIndex.row]
+            //self.delegate = detailVC
+            // let selectedIndex = self.tableView.indexPathForSelectedRow!
+            // delegate?.dataDidPassed(data: companies[selectedIndex.row])
+            // detailVC.company = companies[selectedIndex.row]
         }
         
-       // }
+        // }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "1", sender: nil)
         //  let selectedCompany = self.companies[indexPath.row]
         //  if delegate != nil {
         //       delegate?.dataDidPassed(data: "true \(selectedCompany)")
@@ -76,16 +86,16 @@ class CompanyViewController: UITableViewController  {
         //   if let detailViewController = self.delegate as? DetailViewController {
         //       splitViewController?.showDetailViewController(detailViewController, sender: nil)
         //   }
-        switch indexPath.row {
-        case 0:
-            self.performSegue(withIdentifier: "2", sender: nil)
-        case 1:
-            self.performSegue(withIdentifier: "2", sender: nil)
-        case 2:
-            self.performSegue(withIdentifier: "3", sender: nil)
-        default:
-            break
-        }
+//        switch indexPath.row {
+//        case 0:
+//            self.performSegue(withIdentifier: "1", sender: nil)
+//        case 1:
+//            self.performSegue(withIdentifier: "2", sender: nil)
+//        case 2:
+//            self.performSegue(withIdentifier: "3", sender: nil)
+//        default:
+//            break
+//        }
     }
     
     func loadCompanyInfo(){
@@ -105,7 +115,7 @@ class CompanyViewController: UITableViewController  {
         }
     }
     
-    }
+}
 
 extension CompanyViewController:UISearchBarDelegate,UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
@@ -114,5 +124,5 @@ extension CompanyViewController:UISearchBarDelegate,UISearchResultsUpdating{
         })
         tableView.reloadData()
     }
-
+    
 }

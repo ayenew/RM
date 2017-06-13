@@ -10,38 +10,55 @@
     </dependencies>
     <scenes>
         <!--My Book-->
-        <scene sceneID="2kc-8s-oIa">
+        <scene sceneID="YW6-ek-rsV">
             <objects>
-                <viewController id="h6Q-7K-DjN" customClass="DetailViewController" customModule="RM53_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="auu-wc-11u"/>
-                        <viewControllerLayoutGuide type="bottom" id="IY0-bF-kzS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Exu-Cn-oId">
+                <collectionViewController id="rfT-ps-Yti" customClass="DetailViewController" customModule="RM53_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zAn-YZ-sCF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monster Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRW-Jc-WPe">
-                                <rect key="frame" x="119" y="28" width="203" height="36"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="NV5-bF-GrJ">
+                            <size key="itemSize" width="138" height="116"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="byk-mb-KUe">
+                                <rect key="frame" x="15" y="65" width="138" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q59-gt-GCa">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Item" id="Jm9-4d-hWx"/>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                    </view>
-                    <navigationItem key="navigationItem" title="My Book" id="iQ8-BX-V99"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gj8-st-Twg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="116"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <color key="backgroundColor" red="0.13056985269999999" green="0.2374196875" blue="0.62408562570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="header" id="7OS-Lu-CUx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <color key="backgroundColor" red="0.97638529539108276" green="0.97652524709701538" blue="0.97635477781295776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="rfT-ps-Yti" id="o9A-om-Erg"/>
+                            <outlet property="delegate" destination="rfT-ps-Yti" id="xsd-Wr-8Wz"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="My Book" id="kkv-FO-QcO"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WT3-Q1-qFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="902"/>
+            <point key="canvasLocation" x="496.80000000000001" y="901.79910044977521"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FDV-bs-ET6">
@@ -55,7 +72,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="h6Q-7K-DjN" kind="relationship" relationship="rootViewController" id="0AI-s0-LQN"/>
+                        <segue destination="rfT-ps-Yti" kind="relationship" relationship="rootViewController" id="nvT-pL-Iic"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZb-JD-ZTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
