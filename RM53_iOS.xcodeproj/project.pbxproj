@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		530CA7DF1EEEC2F70087339E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CA7DE1EEEC2F70087339E /* CustomTabBarController.swift */; };
+		53C8DF671EF0A45C00AD57C5 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8DF661EF0A45C00AD57C5 /* CardCell.swift */; };
 		53F051091EED84D500D1C55D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F051081EED84D500D1C55D /* AppDelegate.swift */; };
 		53F051101EED84D500D1C55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F0510F1EED84D500D1C55D /* Assets.xcassets */; };
 		53F051251EED86EE00D1C55D /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F0511A1EED86EE00D1C55D /* Company.storyboard */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		530CA7DE1EEEC2F70087339E /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		53C8DF661EF0A45C00AD57C5 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		53F051051EED84D500D1C55D /* RM53_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RM53_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F051081EED84D500D1C55D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F0510F1EED84D500D1C55D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				53F051461EEDAE9C00D1C55D /* Company.json */,
 				53F051141EED84D500D1C55D /* Info.plist */,
 				53F051441EED9B9D00D1C55D /* UIViewGradient.swift */,
+				53C8DF661EF0A45C00AD57C5 /* CardCell.swift */,
 			);
 			path = RM53_iOS;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				53F0513C1EED86FF00D1C55D /* GreenViewController.swift in Sources */,
 				53F0513D1EED86FF00D1C55D /* RedViewController.swift in Sources */,
 				53F0512D1EED86EE00D1C55D /* CompanyViewController.swift in Sources */,
+				53C8DF671EF0A45C00AD57C5 /* CardCell.swift in Sources */,
 				53F051261EED86EE00D1C55D /* CustomSplitViewController.swift in Sources */,
 				53F0512C1EED86EE00D1C55D /* MeetingViewController.swift in Sources */,
 				53F0513B1EED86FF00D1C55D /* CommonHelper.swift in Sources */,

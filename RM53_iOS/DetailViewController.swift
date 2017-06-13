@@ -1,6 +1,7 @@
 import UIKit
 
 class DetailViewController: UICollectionViewController, DataDelegate, UISplitViewControllerDelegate, UICollectionViewDelegateFlowLayout {
+    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     let backgroundColors = [UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1),UIColor(red: 250/255.0, green: 250/255.0, blue: 250/255.0, alpha: 1)]
     var pageTitle:String = ""
     var indexNumber: Int = -1
@@ -23,20 +24,33 @@ class DetailViewController: UICollectionViewController, DataDelegate, UISplitVie
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 9
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 4
+        return 11
     }
 
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CardCell
+        cell.contentView.layer.cornerRadius = 10.0
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = false
+        
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        
+        
         let view = UIView(frame: cell.bounds)
-        view.backgroundColor = UIColor(colorLiteralRed: 0.278, green: 0.694, blue: 0.537, alpha: 1.00)
-        view.layer.cornerRadius = 10
+        view.backgroundColor = UIColor(red: 230/255.0, green: 229/255.0, blue: 230/255.0, alpha: 1)
+        view.layer.cornerRadius = 10.0
         cell.selectedBackgroundView = view
         let indx = indexPath.row % 2 == 0 ? 0 : 1
         cell.backgroundColor = backgroundColors[indx]
@@ -44,39 +58,28 @@ class DetailViewController: UICollectionViewController, DataDelegate, UISplitVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return CGSize(width: 150, height: 150)
+        let paddingSpace = sectionInsets.left * (1 + 3)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / 3
+        return CGSize(width: widthPerItem, height: widthPerItem)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                        referenceSizeForHeaderInSection section: Int) -> CGSize{
-        return CGSize(width: self.collectionView!.frame.size.width - 100, height: 30)
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
     }
     
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView{
-        
-        switch kind {
-            
-        case UICollectionElementKindSectionHeader:
-            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind,withReuseIdentifier: "header",for: indexPath)
-            view.backgroundColor = UIColor.white
-                //UIColor(red: 238/255.0, green: 238/255.0, blue: 238/255.0, alpha: 1)
-            print(indexPath.section)
-            
-            let label = UILabel(frame: view.frame)
-            label.text = "YTD Revenue \(indexPath.section) - \(indexPath.row)"
-            label.font = UIFont(name: "helvetica", size: 20)
-            label.textAlignment = .center
-            view.addSubview(label)
-            return view
-            
-        default:
-            
-            assert(false, "Unexpected element kind")
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        guard let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
         }
-
+        flowLayout.invalidateLayout()
     }
-    
     
     func dataDidPassed(data:Company) {
         // print("Data Passed \(data[0])")
