@@ -8,8 +8,10 @@ class DetailViewController: UICollectionViewController, DataDelegate, UISplitVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 230/255.0, green: 230/255.0, blue: 230/255.0, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blue]
         self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        collectionView?.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "card")
         
     }
     
@@ -34,7 +36,7 @@ class DetailViewController: UICollectionViewController, DataDelegate, UISplitVie
 
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CardCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CustomCollectionViewCell
         cell.contentView.layer.cornerRadius = 10.0
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor.clear.cgColor
@@ -61,6 +63,7 @@ class DetailViewController: UICollectionViewController, DataDelegate, UISplitVie
         let paddingSpace = sectionInsets.left * (1 + 3)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / 3
+        print(widthPerItem)
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
     

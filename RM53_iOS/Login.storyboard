@@ -107,13 +107,13 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="0.53670918940000001" green="0.89540636539999996" blue="0.96938627960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.87569659948348999" green="0.97180527448654175" blue="0.99063080549240112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                        <color key="value" red="0.53670918940000001" green="0.89540636539999996" blue="0.96938627960000001" alpha="0.85084011130136983" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.91321545839309692" green="0.97980767488479614" blue="0.99821096658706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
-                                        <color key="value" red="0.53670918940000001" green="0.89540636539999996" blue="0.96938627960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.8456423282623291" green="0.96378332376480103" blue="0.98728865385055542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

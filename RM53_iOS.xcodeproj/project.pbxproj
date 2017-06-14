@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		530CA7DF1EEEC2F70087339E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530CA7DE1EEEC2F70087339E /* CustomTabBarController.swift */; };
 		53C8DF671EF0A45C00AD57C5 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8DF661EF0A45C00AD57C5 /* CardCell.swift */; };
+		53C8DF6A1EF0E45600AD57C5 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C8DF681EF0E45600AD57C5 /* CustomCollectionViewCell.swift */; };
+		53C8DF6B1EF0E45600AD57C5 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C8DF691EF0E45600AD57C5 /* CustomCollectionViewCell.xib */; };
 		53F051091EED84D500D1C55D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F051081EED84D500D1C55D /* AppDelegate.swift */; };
 		53F051101EED84D500D1C55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F0510F1EED84D500D1C55D /* Assets.xcassets */; };
 		53F051251EED86EE00D1C55D /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53F0511A1EED86EE00D1C55D /* Company.storyboard */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		530CA7DE1EEEC2F70087339E /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		53C8DF661EF0A45C00AD57C5 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		53C8DF681EF0E45600AD57C5 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		53C8DF691EF0E45600AD57C5 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		53F051051EED84D500D1C55D /* RM53_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RM53_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F051081EED84D500D1C55D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53F0510F1EED84D500D1C55D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				53F0511A1EED86EE00D1C55D /* Company.storyboard */,
 				53F0511B1EED86EE00D1C55D /* CustomSplitViewController.swift */,
 				53F0511C1EED86EE00D1C55D /* Details.storyboard */,
+				53C8DF681EF0E45600AD57C5 /* CustomCollectionViewCell.swift */,
+				53C8DF691EF0E45600AD57C5 /* CustomCollectionViewCell.xib */,
 				53F0511D1EED86EE00D1C55D /* Meetings.storyboard */,
 				53F0511E1EED86EE00D1C55D /* Relation.storyboard */,
 				53F0511F1EED86EE00D1C55D /* Main.storyboard */,
@@ -191,6 +197,7 @@
 				53F051471EEDAE9C00D1C55D /* Company.json in Resources */,
 				53F051381EED86FF00D1C55D /* LaunchScreen.xib in Resources */,
 				53F0512A1EED86EE00D1C55D /* Main.storyboard in Resources */,
+				53C8DF6B1EF0E45600AD57C5 /* CustomCollectionViewCell.xib in Resources */,
 				53F051281EED86EE00D1C55D /* Meetings.storyboard in Resources */,
 				53F051101EED84D500D1C55D /* Assets.xcassets in Resources */,
 			);
@@ -205,6 +212,7 @@
 			files = (
 				53F051391EED86FF00D1C55D /* LoginViewController.swift in Sources */,
 				53F0512B1EED86EE00D1C55D /* RelationViewController.swift in Sources */,
+				53C8DF6A1EF0E45600AD57C5 /* CustomCollectionViewCell.swift in Sources */,
 				53F0513C1EED86FF00D1C55D /* GreenViewController.swift in Sources */,
 				53F0513D1EED86FF00D1C55D /* RedViewController.swift in Sources */,
 				53F0512D1EED86EE00D1C55D /* CompanyViewController.swift in Sources */,
