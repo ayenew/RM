@@ -10,6 +10,9 @@ class RelationViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         //_ = self.navigationController?.popToRootViewController(animated: true)
+        
+        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "relationsDetailVC") as! UINavigationController
+        self.splitViewController?.viewControllers[1] = detailViewController
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

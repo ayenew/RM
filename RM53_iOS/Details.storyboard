@@ -25,7 +25,7 @@
                             <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="byk-mb-KUe" customClass="SampleCollectionViewCell" customModule="RM53_iOS" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="byk-mb-KUe">
                                 <rect key="frame" x="15" y="15" width="138" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -107,7 +107,7 @@
         <!--Navigation Controller-->
         <scene sceneID="FDV-bs-ET6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BNO-TE-bo8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="companyDetailVC" automaticallyAdjustsScrollViewInsets="NO" id="BNO-TE-bo8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kVR-Pn-jk3">

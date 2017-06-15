@@ -3,12 +3,12 @@ import UIKit
 struct Company {
     let name: String
     let address: String
-    let city: String
+    let zip: String
     
-    init(name:String,address:String,city:String) {
+    init(name:String,address:String,zip:String) {
         self.name = name
         self.address = address
-        self.city = city
+        self.zip = zip
     }
     
 }

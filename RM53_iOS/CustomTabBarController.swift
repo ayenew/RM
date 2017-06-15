@@ -7,6 +7,11 @@ class CustomTabBarController: UITabBarController {
         self.tabBarController?.tabBar.isTranslucent = false
         self.tabBarController?.tabBar.barTintColor = UIColor.red
         self.tabBarController?.tabBar.backgroundColor = UIColor.blue
+        loadCompanyInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
     }
 
 }

@@ -10,6 +10,8 @@ class MeetingViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         //_ = self.navigationController?.popToRootViewController(animated: true)
+        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "meetingDetailVC") as! UINavigationController
+        self.splitViewController?.viewControllers[1] = detailViewController
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,7 +25,7 @@ class MeetingViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "meeting", for: indexPath)
 
-        cell.textLabel?.text = "Meeting \(indexPath.row)"
+        //cell.textLabel?.text = "Meeting \(indexPath.row)"
 
         return cell
     }

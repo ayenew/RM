@@ -10,4 +10,8 @@ class CustomSplitViewController: UISplitViewController {
         self.tabBarController?.tabBar.barTintColor = UIColor.red
         self.tabBarController?.tabBar.backgroundColor = UIColor.blue
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //
+    }
 }

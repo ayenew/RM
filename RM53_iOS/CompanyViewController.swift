@@ -3,9 +3,9 @@ import UIKit
 protocol DataDelegate {
     func dataDidPassed(data:Company)
 }
-
+var detailVC : UIViewController?
 class CompanyViewController: UITableViewController  {
-    var companies = [Company]()
+    //var companies = [[String:Any]]()
     var delegate : DataDelegate?
     let searchController = UISearchController(searchResultsController: nil)
     var filteredCompany = [Company]()
@@ -14,17 +14,19 @@ class CompanyViewController: UITableViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 230/255.0, green: 230/255.0, blue: 230/255.0, alpha: 1)
-        loadCompanyInfo()
+        //loadCompanyInfo()
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = false
         tableView.tableHeaderView = searchController.searchBar
+        detailVC = self.splitViewController?.viewControllers[1]
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         //_ = self.navigationController?.popToRootViewController(animated: true)
+        self.splitViewController?.viewControllers[1] = detailVC!
     }
     
     
@@ -40,7 +42,7 @@ class CompanyViewController: UITableViewController  {
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredCompany.count
         }else{
-            return companies.count
+            return relationshipRepo.count
         }
     }
     
@@ -50,8 +52,8 @@ class CompanyViewController: UITableViewController  {
             cell.textLabel?.text = filteredCompany[indexPath.row].name
             cell.detailTextLabel?.text = filteredCompany[indexPath.row].address
         } else {
-            cell.textLabel?.text = companies[indexPath.row].name
-            cell.detailTextLabel?.text = companies[indexPath.row].address
+            cell.textLabel?.text = relationshipRepo[indexPath.row]["name"] as! String?
+            cell.detailTextLabel?.text = relationshipRepo[indexPath.row]["address"] as! String?
             cell.imageView?.image = UIImage(named: "business")
         }
         return cell
@@ -59,20 +61,21 @@ class CompanyViewController: UITableViewController  {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //if delegate == nil {
-        if segue.identifier == "1" {
+       // if segue.identifier == "1" {
             let destination = segue.destination as! UINavigationController
             let detailVC = destination.topViewController as! DetailViewController
             //self.delegate = detailVC
             let selectedIndex = self.tableView.indexPathForSelectedRow!
-            detailVC.pageTitle = companies[selectedIndex.row].name
+            detailVC.pageTitle = relationshipRepo[selectedIndex.row]["name"] as! String
             detailVC.indexNumber = selectedIndex.row
+            detailVC.company = relationshipRepo[selectedIndex.row]
             // delegate?.dataDidPassed(data: companies[selectedIndex.row])
            // detailVC.company = companies[selectedIndex.row]
             //self.delegate = detailVC
             // let selectedIndex = self.tableView.indexPathForSelectedRow!
             // delegate?.dataDidPassed(data: companies[selectedIndex.row])
             // detailVC.company = companies[selectedIndex.row]
-        }
+        //}
         
         // }
     }
@@ -98,30 +101,35 @@ class CompanyViewController: UITableViewController  {
 //        }
     }
     
-    func loadCompanyInfo(){
-        if let path = Bundle.main.path(forResource: "Company", ofType: "json") {
-            do {
-                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
-                do {
-                    let jsonResult: [String:Any] = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:Any]
-                    
-                    if let companyArray : [[String:Any]] = jsonResult["company"] as? [[String:Any]] {
-                        for aCompany in companyArray {
-                            companies.append(Company(name: aCompany["name"] as! String, address: aCompany["address"] as! String, city: aCompany["city"] as! String))
-                        }
-                    }
-                } catch {}
-            } catch {}
-        }
-    }
+//    func loadCompanyInfo(){
+//        if let path = Bundle.main.path(forResource: "Company", ofType: "json") {
+//            do {
+//                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
+//                do {
+//                    let jsonResult: [String:[[String:Any]]] = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:[[String:Any]]]
+//                    
+//                        let companiesArray : [[String:Any]] = jsonResult["relationship"]! as [[String:Any]]
+//                        for aCompany in companiesArray {
+//                            var c = [String:Any]()
+//                            c["name"] = aCompany["name"] as! String
+//                            c["address"] = aCompany["address"] as! String
+//                            c["zip"] = aCompany["zip"] as! String
+//                            c["notifications"] = aCompany["notifications"] as! [String:Any]
+//                            c["alerts"] = aCompany["alerts"] as! [String:Any]
+//                            companies.append(c)
+//                    }
+//                } catch {}
+//            } catch {}
+//        }
+//    }
     
 }
 
 extension CompanyViewController:UISearchBarDelegate,UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
-        self.filteredCompany = self.companies.filter({
-            nil != $0.name.range(of:searchController.searchBar.text!)
-        })
+    //    self.filteredCompany = self.companies.filter({
+        //    nil != $0["name"] as.range(of:searchController.searchBar.text!)
+     //   })
         tableView.reloadData()
     }
     
